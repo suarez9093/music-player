@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { AppContext } from '../../context';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 const LoadMusic = (props) => {
+    const { modal, toggle } = useContext(AppContext);
+
     const {
         buttonLabel,
         className
     } = props;
 
-    const [modal, setModal] = useState(false);
-    const toggle = () => setModal(!modal);
+    // const [modal, setModal] = useState(false);
+    // const toggle = () => setModal(!modal);
 
     return (
         <div>
