@@ -1,26 +1,30 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import LoadMusic from './components/LoadMusic';
+import LoadLyrics from './components/LoadLyrics';
 import MusicPlayer from './components/MusicPlayer';
-import API from './utils/API';
-
 
 function App() {
   return (
     <Container>
       <h1>Music Player</h1>
+      <br />
       <Row>
-        <Col md={{ size: 'auto', offset: 4 }}><LoadMusic /></Col>
+        <Col md="6">
+          <LoadMusic />
+
+        </Col>
+
       </Row>
       <Row>
-        <Col md={{ size: 'auto', offset: 4 }}>Lyric</Col>
+        <Col md={{ size: 'auto', offset: 4 }}><LoadLyrics /></Col>
       </Row>
       <Row>
         <Col md={{ size: 'auto', offset: 4 }}><MusicPlayer /></Col>
 
-        <button onClick={() => API.searchArtist("Lindsey", "Stirling")}>Search</button>
+
       </Row>
-    </Container>
+    </Container >
   );
 }
 

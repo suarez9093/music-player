@@ -3,7 +3,7 @@ import { AppContext } from '../../context';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 const LoadMusic = (props) => {
-    const { modal, toggle, handleChange, setSource, song } = useContext(AppContext);
+    const { modal, toggle, handleChange, setSource, song, checkBox, isChecked } = useContext(AppContext);
 
     const {
         buttonLabel,
@@ -50,6 +50,17 @@ const LoadMusic = (props) => {
                                 placeholder="https://www.location.com" />
                         </FormGroup>
 
+                        <FormGroup check>
+                            <Label check>
+                                <Input
+                                    type="checkbox"
+                                    name="isChecked"
+                                    onChange={handleChange}
+                                    checked={song.isChecked}
+                                />Load Lyrics</Label>
+                        </FormGroup>
+
+                        <br />
                         <Button onClick={setSource}>Submit</Button>
                     </Form>
 
@@ -60,3 +71,10 @@ const LoadMusic = (props) => {
 }
 
 export default LoadMusic;
+
+
+
+
+
+
+

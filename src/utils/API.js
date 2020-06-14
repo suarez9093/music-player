@@ -1,15 +1,29 @@
 import axios from 'axios';
-const endpoint = "https://api.musixmatch.com/ws/1.1/track.search?format=jsonp&callback=callback&q_artist="
 
-// Lindsey%20Stirling&quorum_factor=1&apikey=adc04e92578b02928495d986953b0d30
-// '
-const API_KEY = process.env.REACT_APP_MUSIX_MATCH_API_KEY
+const endpoint = `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/matcher.lyrics.get?q_track=`
 
 
-export default {
-    searchArtist: (firstName, lastName) => {
-        const URL = `${endpoint}${firstName}%20${lastName}&quorum_factor=1&apikey=${API_KEY}`
+export async function searchArtist(artist, trackName) {
+    trackName = trackName.trim().split(" ")
+    artist = artist.trim().split(" ")
+    let track = []
+    let artistSearch = [];
 
-        console.log(axios.get(URL))
+    for (let i = 0; i < trackName.length - 1; i++) {
+        track.push(trackName[i] + "%20")
     }
-}
+    track.push(trackName[trackName.length - 1])
+    track = track.join("")
+
+    for (let i = 0; i < artist.length - 1; i++) {
+        artistSearch.push(artist[i] + "%20")
+    }
+    artistSearch.push(artist[artist.length - 1])
+    artistSearch = artistSearch.join("")
+
+
+    let response = await axios.get(`${endpoint}${track}&q_artist=${artistSearch}&f_has_lyrics&apikey=${process.env.REACT_APP_MM_KEY}`)
+    const { lyrics_body } = response.data.message.body.lyrics
+    return lyrics_body;
+};
+
