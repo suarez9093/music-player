@@ -3,6 +3,7 @@ const AppContext = createContext()
 
 function AppContextProvider(props) {
     const [songArray, setSongArray] = useState([])
+    const [isPlaying, setIsPlaying] = useState()
     const [song, setSong] = useState({ song: "", artist: "", link: "" })
     const [modal, setModal] = useState(false);
     function toggle() {
@@ -18,21 +19,27 @@ function AppContextProvider(props) {
     };
 
     function setSource() {
-        // let toLower = song.song.trim().toLowerCase()
-        // console.log(toLower)
         const songToLower = {
             song: song.song.trim().toLowerCase(),
             artist: song.artist.trim().toLowerCase(),
             link: song.link.trim().toLowerCase(),
         }
         setSongArray([...songArray, songToLower])
-        setSong({ song: "", artist: "", link: "" })
+        // setSong({ song: "", artist: "", link: "" })
         setModal(!modal)
+
     }
-    console.log('song:', song)
-    console.log('songArray:', songArray)
+
+    // function onTrackChange(source) {
+    //     setIsPlaying(() => {
+    //         source.refs.audio.pause()
+    //         source.refs.audio.load()
+    //         source.refs.audio.play()
+    //     })
+
+    // }
     return (
-        <AppContext.Provider value={{ setSong, setSource, modal, song, handleChange, toggle }}>
+        <AppContext.Provider value={{ setSong, setSource, modal, song, handleChange, toggle, songArray, isPlaying }}>
             {props.children}
         </AppContext.Provider>
     )

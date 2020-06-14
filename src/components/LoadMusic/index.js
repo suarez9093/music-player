@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { AppContext } from '../../context';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
@@ -49,11 +49,6 @@ const LoadMusic = (props) => {
                                 onChange={handleChange}
                                 placeholder="https://www.location.com" />
                         </FormGroup>
-                        {/* <FormGroup>
-                            <Label for="exampleText">Text Area</Label>
-                            <Input type="textarea" name="text" id="exampleText" />
-                        </FormGroup> */}
-
 
                         <Button onClick={setSource}>Submit</Button>
                     </Form>

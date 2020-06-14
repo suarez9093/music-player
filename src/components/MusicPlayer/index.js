@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
-import songs from '../../songs.json'
+import React, { useContext, useEffect } from 'react';
+import { AppContext } from '../../context';
 
 function MusicPlayer() {
-    console.log(songs[0].url)
-    fetch(songs).then(res => res.json).then(data => console.log('data: ', data))
+    const { song, isPlaying, onTrackChange } = useContext(AppContext)
+    console.log('MusiPlayer song: ', song)
+    let source = song.link;
+
+    useEffect(() => {
+        source = song.link
+    }, [song])
     return (
         <div>
-            <audio controls>
+            <audio id='player' controls refs="audio">
                 {/* <source src={Song} type="audio/ogg" /> */}
-                <source src={songs[0].url} type="audio/mpeg" />
+                <source src={source} type="audio/mpeg" />
 Your browser does not support the audio element.
 </audio>
         </div>
