@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container, Row, Col } from 'reactstrap';
+import LoadMusic from './components/LoadMusic';
+import MusicPlayer from './components/MusicPlayer';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <h1>Music Player</h1>
+      <Row>
+        <Col md={{ size: 'auto', offset: 4 }}><LoadMusic /></Col>
+      </Row>
+      <Row>
+        <Col md={{ size: 'auto', offset: 4 }}>Lyric</Col>
+      </Row>
+      <Row>
+        <Col md={{ size: 'auto', offset: 4 }}><MusicPlayer /></Col>
+      </Row>
+    </Container>
   );
 }
 
