@@ -57,7 +57,7 @@ const LoadMusic = (props) => {
                                     name="isChecked"
                                     onChange={handleChange}
                                     checked={song.isChecked}
-                                />Load Lyrics</Label>
+                                />Auto Load Lyrics</Label>
                         </FormGroup>
 
                         <br />

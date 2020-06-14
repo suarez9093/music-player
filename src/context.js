@@ -4,14 +4,20 @@ const AppContext = createContext()
 
 function AppContextProvider(props) {
     // const [isChecked, setIsChecked] = useState(false)
-    const [lyrics, setLyrics] = useState();
     // const [songArray, setSongArray] = useState([])
+    const [lyrics, setLyrics] = useState();
     const [song, setSong] = useState({ song: "", artist: "", link: "", isChecked: false })
-
+    const [modalLyric, setModalLyrics] = useState(false);
     const [modal, setModal] = useState(false);
+
     function toggle() {
         setModal(!modal);
     };
+
+    function toggleLyrics() {
+        setModalLyrics(!modalLyric);
+    };
+
 
     function handleChange(e) {
         const { name, value, checked, type } = e.target
@@ -39,15 +45,15 @@ function AppContextProvider(props) {
     }
 
     async function searchLyrics() {
-        if (song.isChecked) {
+        if (song.isChecked && song.song !== "") {
             const artistLyrics = await searchArtist(song.artist, song.song)
             setLyrics(artistLyrics)
-        }
+        } else setLyrics("No Results found")
     }
 
 
     return (
-        <AppContext.Provider value={{ searchLyrics, setSong, setSource, modal, song, handleChange, toggle, lyrics }}>
+        <AppContext.Provider value={{ toggleLyrics, searchLyrics, setSong, setSource, modal, song, handleChange, toggle, lyrics }}>
             {props.children}
         </AppContext.Provider>
     )
