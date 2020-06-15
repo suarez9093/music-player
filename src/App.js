@@ -1,21 +1,30 @@
-import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
-import LoadMusic from './components/LoadMusic';
-import MusicPlayer from './components/MusicPlayer';
-
+import React from "react";
+import { Container, Row, Col } from "reactstrap";
+// import LoadLyricsButton from "./components/Buttons/LoadLyricsButton";
+// import LoadMusicButton from "./components/Buttons/LoadMusicButton";
+import LyricContainer from "./components/LyricContainer/LyricContainer";
+// import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
 
 function App() {
   return (
     <Container>
-      <h1>Music Player</h1>
       <Row>
-        <Col md={{ size: 'auto', offset: 4 }}><LoadMusic /></Col>
+        <Col />
+        <Col />
       </Row>
       <Row>
-        <Col md={{ size: 'auto', offset: 4 }}>Lyric</Col>
+        <Col />
+        <Col md="6">
+          <LyricContainer />
+        </Col>
+        <Col />
       </Row>
       <Row>
-        <Col md={{ size: 'auto', offset: 4 }}><MusicPlayer /></Col>
+        <Col />
+        <Col>
+          {/* <MusicPlayer /> */}
+        </Col>
+        <Col />
       </Row>
     </Container>
   );
