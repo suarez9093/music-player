@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { AppContext } from "../../context";
 import LoadLyricsButton from "../Buttons/LoadLyricsButton";
 import LoadMusicButton from "../Buttons/LoadMusicButton";
@@ -8,9 +8,7 @@ function LyricContainer() {
   const { displaySongLyrics, songData } = useContext(AppContext);
 
 
-  useEffect(() => {
-    document.getElementById('rabbit-lyrics').innerHTML = displaySongLyrics
-  }, [displaySongLyrics])
+
   return (
     <>
       <div className="lyric-grid-container">

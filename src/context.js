@@ -1,11 +1,12 @@
 import React, { useState, createContext } from "react";
+import { musixMatch } from './utils/API';
 const AppContext = createContext();
 
 function AppContextProvider(props) {
   const [lyricModal, setLyricModal] = useState(false);
   const [musicModal, setMusicModal] = useState(false);
   const [songLyrics, setSongLyrics] = useState();
-  const [displaySongLyrics, setDisplaySongLyrics] = useState(" [00:15:00] Spending all my nights, all my money going out on the town Doing anything just to get you off of my mind But when the morning comes, I'm right back where I started again Trying to forget you is just a waste of time Baby come back, any kind of fool could see There was something in everything about you Baby come back, [00:30:00] you can blame it all on me I was wrong, and I just can't live without you All day long, wearing a mask of false bravado Trying to keep up the smile that hides a tear But as the sun goes down, I get that empty feeling again How I wish to God that you were here [00: 50: 00] Baby come back, any kind of fool could see There was something in everything about you Baby come back, you can blame it all on me I was wrong, and I just can't live without you Now that I put it all together [01:00:00] Give me the chance to make you see Have you used up all the love in your heart Nothing left for me, ain't there nothing left for me Baby come back, any kind of fool could see There was something in everything about you Baby come back, listen, you can blame it all on me I was wrong, and I just can't live without you I was wrong, and I just can't live");
+  const [displaySongLyrics, setDisplaySongLyrics] = useState("Load lyrics");
   const [songData, setSongData] = useState({
     title: "",
     artist: "",
@@ -21,7 +22,16 @@ function AppContextProvider(props) {
   function searchTrack() {
     console.log(songData);
     setMusicModal(!musicModal);
+    searchLyrics()
   }
+
+  async function searchLyrics() {
+    if (songData.isChecked && songData.song !== "") {
+      const artistLyrics = await musixMatch(songData.artist, songData.title)
+      setDisplaySongLyrics(artistLyrics)
+    } else setDisplaySongLyrics("No Results found")
+  }
+
 
   function handleChange(e) {
     const { name, value, checked, type } = e.target;
