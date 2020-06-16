@@ -1,21 +1,16 @@
-import React, { useContext, useEffect } from "react";
-import { AppContext } from "../../context";
+import React, { useContext } from 'react';
+import ReactJkMusicPlayer from "react-jinke-music-player";
+import "react-jinke-music-player/assets/index.css";
+import { AppContext } from '../../context';
 
 function MusicPlayer() {
-  const { songData } = useContext(AppContext);
+    const { playlist } = useContext(AppContext)
+    return (
+        <div>
 
-  useEffect(() => {
-    document.getElementById("audioFile").src = songData.link;
-  }, [songData]);
-  return (
-    <div>
-      <div>
-        <audio id="audioFile" src={songData.link} controls>
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-    </div>
-  );
-}
+            <ReactJkMusicPlayer audioLists={playlist} autoPlay={false} mode="full" />
+        </div>
+    )
+};
 
-export default MusicPlayer;
+export default MusicPlayer

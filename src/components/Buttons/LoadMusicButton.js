@@ -27,7 +27,7 @@ function LoadMusicButton(props) {
         Load Music
       </Button>
       <Modal isOpen={musicModal}>
-        <ModalHeader toggle={toggleMusicModal}>Search A Song</ModalHeader>
+        <ModalHeader toggle={toggleMusicModal}>Add a song</ModalHeader>
         <ModalBody>
           <Form>
             <FormGroup>

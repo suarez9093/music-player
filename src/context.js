@@ -6,13 +6,14 @@ function AppContextProvider(props) {
   const [lyricModal, setLyricModal] = useState(false);
   const [musicModal, setMusicModal] = useState(false);
   const [songLyrics, setSongLyrics] = useState();
-  const [displaySongLyrics, setDisplaySongLyrics] = useState("Load lyrics");
+  const [displaySongLyrics, setDisplaySongLyrics] = useState();
   const [songData, setSongData] = useState({
     title: "",
     artist: "",
     link: "",
     isChecked: false
   });
+
 
   function displayLyrics() {
     setDisplaySongLyrics(songLyrics);
@@ -44,6 +45,7 @@ function AppContextProvider(props) {
         ...prevState,
         [name]: value
       }));
+    console.log(songData)
   }
 
   function handleLyricChange(e) {
@@ -53,12 +55,12 @@ function AppContextProvider(props) {
   }
 
   function toggleMusicModal() {
-    console.log("musicModal:", musicModal);
+
     setMusicModal(!musicModal);
-    console.log("musicModal:", musicModal);
+
   }
   function toggleLyricModal() {
-    console.log("lyricModal:", lyricModal);
+
     setLyricModal(!lyricModal);
   }
 

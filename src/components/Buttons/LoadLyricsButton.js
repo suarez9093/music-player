@@ -1,17 +1,7 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../context";
-import {
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  FormText
-} from "reactstrap";
+import { Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input, ModalFooter, FormText } from 'reactstrap'
+
 
 function LoadLyricsButton(props) {
   const {
@@ -19,7 +9,7 @@ function LoadLyricsButton(props) {
     toggleLyricModal,
     songLyrics,
     handleLyricChange,
-    displayLyrics
+    displayLyrics, handleChange
   } = useContext(AppContext);
 
   return (
@@ -32,7 +22,7 @@ function LoadLyricsButton(props) {
         <ModalBody>
           <Form>
             <FormGroup>
-              <Label for="exampleText">Lyrics</Label>
+              <Label for="exampleText">Link to WebVtt Lyrics</Label>
               <Input
                 type="textarea"
                 name="songLyrics"
@@ -40,6 +30,13 @@ function LoadLyricsButton(props) {
                 value={songLyrics}
                 onChange={handleLyricChange}
               />
+              {/* <Input
+                type="input"
+                name="webVtt"
+                placeholder="www.location.com"
+                value={songLyrics}
+                onChange={handleLyricChange}
+              /> */}
             </FormGroup>
 
             <FormText color="muted">
@@ -67,18 +64,3 @@ function LoadLyricsButton(props) {
 }
 
 export default LoadLyricsButton;
-
-// [00:16.73] アイツの心に 居场所がないんだ
-// [00:21.38]
-// [00:21.51] 制服のポケット
-// [00:24.05] ホンネを忍ばせて
-// [00:26.71] そっと えりを正す
-// [00:31.71] そんな简単には
-// [00:34.38] 手の内 明かせない
-// [00:36.90] あくまでまだ 様子见の段阶
-// [00:41.81]
-// [00:42.01] だけど本当はね
-// [00:44.59] 见破って欲しいの
-// [00:47.25] 淡い期待に胸 ときめかして
-// [00:51.74] チラチラと见てる
-// [00:54.97]
