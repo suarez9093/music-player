@@ -14,7 +14,7 @@ function LoadLyricsButton(props) {
 
   return (
     <div>
-      <Button color="success" onClick={toggleLyricModal}>
+      <Button outline color="success" onClick={toggleLyricModal}>
         Load Lyrics
       </Button>
       <Modal isOpen={lyricModal} toggle={toggleLyricModal}>

@@ -6,7 +6,7 @@ function AppContextProvider(props) {
   const [lyricModal, setLyricModal] = useState(false);
   const [musicModal, setMusicModal] = useState(false);
   const [songLyrics, setSongLyrics] = useState();
-  const [displaySongLyrics, setDisplaySongLyrics] = useState();
+  const [displaySongLyrics, setDisplaySongLyrics] = useState("Ay Fonsi DY Oh Oh no, oh no Oh yeah Diridiri, dirididi Daddy Go Yes, you know that I've been looking at you for a while I have to dance with you today (DY) I saw that your gaze was already calling me Show me the way I'm going (Oh) You, you are the magnet and I am the metal am getting closer and I am putting together the plan Just thinking about it speeds up the pulse (Oh yeah) Now, I am already liking it more than normal All my senses are asking for more This must be taken without any rush Despacito want to breathe your neck slowly Let me tell you things to your earfor you to remember if you are not with meDespacitowant to undress slowly kissessigned in the walls of your mazeand make your body a whole manuscript (up, up, up)(Up, up)I want to see your hair dance ...')")
   const [songData, setSongData] = useState({
     title: "",
     artist: "",

@@ -23,7 +23,7 @@ function LoadMusicButton(props) {
 
   return (
     <div>
-      <Button color="danger" onClick={toggleMusicModal}>
+      <Button outline color="danger" onClick={toggleMusicModal}>
         Load Music
       </Button>
       <Modal isOpen={musicModal}>
