@@ -1,33 +1,53 @@
 import React from "react";
-import { Container, Row, Col } from "reactstrap";
-// import LoadLyricsButton from "./components/Buttons/LoadLyricsButton";
-// import LoadMusicButton from "./components/Buttons/LoadMusicButton";
+import MusicPlayer from './components/MusicPlayer/MusicPlayer';
+import LoadLyricsButton from "./components/Buttons/LoadLyricsButton";
+import LoadMusicButton from "./components/Buttons/LoadMusicButton";
 import LyricContainer from "./components/LyricContainer/LyricContainer";
-// import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
+import { Container, Col, Row } from 'reactstrap';
 
 function App() {
   return (
+
+
     <Container>
+      <br />
+      <br />
+
       <Row>
-        <Col />
-        <Col />
+        {/* <Col> */}
+        <LyricContainer />
+        {/* </Col> */}
       </Row>
+
+      <br />
+      <br />
       <Row>
-        <Col />
-        <Col md="6">
-          <LyricContainer />
-        </Col>
-        <Col />
-      </Row>
-      <Row>
-        <Col />
+        {/* <Col></Col> */}
         <Col>
-          {/* <MusicPlayer /> */}
+
+          <MusicPlayer />
         </Col>
-        <Col />
+        <Col>
+        </Col>
       </Row>
+
+      <Row>
+
+        <Col>
+          <LoadMusicButton />
+        </Col>
+        <Col>
+          {/* <LoadLyricsButton /> */}
+        </Col>
+        <Col></Col>
+        <Col></Col>
+
+      </Row>
+
     </Container>
-  );
+
+
+  )
 }
 
 export default App;

@@ -1,36 +1,16 @@
-import React, { useContext, useEffect } from "react";
-import { Jumbotron } from "reactstrap";
+import React, { useContext } from "react";
 import { AppContext } from "../../context";
-import LoadLyricsButton from "../Buttons/LoadLyricsButton";
-import LoadMusicButton from "../Buttons/LoadMusicButton";
+import './style.css';
+
 function LyricContainer() {
-  const { displaySongLyrics, songData } = useContext(AppContext);
-
-
-  useEffect(() => {
-    document.getElementsByClassName('rabbit-lyrics').innerHTML = displaySongLyrics
-  }, [displaySongLyrics])
+  const { songData, displaySongLyrics } = useContext(AppContext);
   return (
-    <>
-      <Jumbotron>
-        <h1 className="display-3">Lyrics</h1>
-        <hr className="my-2" />
-        <div className="rabbit-lyrics" data-media="#audioFile" data-height="500" data-alignment="center">{displaySongLyrics}</div>
 
-        <LoadMusicButton />
-        <br />
-        <LoadLyricsButton />
-      </Jumbotron>
-      <audio id="audioFile" src={songData.link} controls>
-        Your browser does not support the audio element.
-      </audio>
+    <div className="lyric-grid-container">
+      {!songData.lyrics ? displaySongLyrics : songData.lyrics}
 
-    </>
-  );
+    </div>
+  )
 }
 
 export default LyricContainer;
-
-
-
-// className="rabbit-lyrics" data-media="#audioFile" data-height="500" data-alignment="center"

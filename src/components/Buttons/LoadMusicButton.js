@@ -23,11 +23,11 @@ function LoadMusicButton(props) {
 
   return (
     <div>
-      <Button color="danger" onClick={toggleMusicModal}>
+      <Button outline color="secondary" onClick={toggleMusicModal}>
         Load Music
       </Button>
       <Modal isOpen={musicModal}>
-        <ModalHeader toggle={toggleMusicModal}>Search A Song</ModalHeader>
+        <ModalHeader toggle={toggleMusicModal}>Add a song</ModalHeader>
         <ModalBody>
           <Form>
             <FormGroup>
@@ -56,10 +56,19 @@ function LoadMusicButton(props) {
               <Label for="linkToSong">Link to Song</Label>
               <Input
                 type="text"
-                name="link"
-                id="linkToSong"
+                name="src"
                 placeholder="www.location.com"
-                value={songData.link}
+                value={songData.src}
+                onChange={handleChange}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="lyrics">Link to Song</Label>
+              <Input
+                type="textarea"
+                name="lyrics"
+                placeholder="Baby Got back"
+                value={songData.lyrics}
                 onChange={handleChange}
               />
             </FormGroup>
@@ -71,7 +80,7 @@ function LoadMusicButton(props) {
                   name="isChecked"
                   onChange={handleChange}
                   checked={songData.isChecked}
-                />{" "}
+                />
                 Auto Load partial lyrics
               </Label>
             </FormGroup>
