@@ -3,7 +3,7 @@ import { AppContext } from "../../context";
 import './style.css';
 
 function LyricContainer() {
-  const { songData, defaultPlaylist } = useContext(AppContext);
+  const { songData, displaySongLyrics } = useContext(AppContext);
 
   // function addTrack() {
   //   let video = document.getElementById('video'), track;
@@ -25,7 +25,7 @@ function LyricContainer() {
     <div>
       <div className="lyric-grid-container">
 
-        {/* {defaultPlaylist} */}
+        {!songData.lyrics ? displaySongLyrics : songData.lyrics}
 
       </div>
 

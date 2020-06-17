@@ -4,7 +4,7 @@ import AudioPlayer from 'react-modular-audio-player';
 import { AppContext } from '../../context';
 
 function MusicPlayer() {
-    const { defaultPlaylist } = useContext(AppContext)
+    const { defaultPlaylist, songData } = useContext(AppContext)
     let rearrangedPlayer = [
         {
             className: "tier-top",
@@ -52,13 +52,18 @@ function MusicPlayer() {
 
     return (
         <div>
-            {defaultPlaylist[0].lyrics}
+
             <AudioPlayer
                 rearrange={rearrangedPlayer}
                 hideLoop={true}
                 iconSize="2em"
                 fontSize="large"
-                audioFiles={defaultPlaylist}
+                audioFiles={[
+                    {
+                        src: songData.src,
+                        title: songData.title,
+                        artist: songData.artist
+                    }]}
 
             />
         </div>

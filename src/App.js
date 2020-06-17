@@ -20,14 +20,17 @@ function App() {
           <LyricContainer />
         </Col>
       </Row>
+
       <Row>
         <Col></Col>
         <Col>
+
           <MusicPlayer />
         </Col>
         <Col>
         </Col>
       </Row>
+
       <Row>
         <Col></Col>
         <Col></Col>
