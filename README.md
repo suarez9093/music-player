@@ -11,7 +11,7 @@
     An app that lets you set an appointment to view a home that is listed on the market without the need of a real estate agent.
     <br />
     <br />
-    <a href="https://fathomless-plains-20031.herokuapp.com/">View live Demo</a>
+    <a href="https://suarez9093.github.io/music-player/">View live Demo</a>
   </p>
 </p>
 
