@@ -9,7 +9,7 @@ function LoadLyricsButton(props) {
     toggleLyricModal,
     songLyrics,
     handleLyricChange,
-    displayLyrics, handleChange
+    displayLyrics
   } = useContext(AppContext);
 
   return (

@@ -35,7 +35,7 @@ function App() {
           <LoadMusicButton />
         </Col>
         <Col>
-          <LoadLyricsButton />
+          {/* <LoadLyricsButton /> */}
         </Col>
         <Col></Col>
         <Col></Col>

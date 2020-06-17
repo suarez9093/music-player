@@ -1,9 +1,9 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { AppContext } from "../../context";
 import './style.css';
 
 function LyricContainer() {
-  const { displaySongLyrics, songData, songLyrics } = useContext(AppContext);
+  const { songData, defaultPlaylist } = useContext(AppContext);
 
   // function addTrack() {
   //   let video = document.getElementById('video'), track;
@@ -25,7 +25,7 @@ function LyricContainer() {
     <div>
       <div className="lyric-grid-container">
 
-        {displaySongLyrics}
+        {/* {defaultPlaylist} */}
 
       </div>
 
