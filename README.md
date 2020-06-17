@@ -1,4 +1,4 @@
- <h3 align="center">Our Project name</h3>
+ <h3 align="center">Laxis Coding Challenge</h3>
  
 ![Musix](gif/demo.gif)
 
@@ -6,13 +6,12 @@
 <br />
 <p align="center">
   
-  </a>
+  
   <p align="center">
-
+    An app that lets you set an appointment to view a home that is listed on the market without the need of a real estate agent.
     <br />
     <br />
     <a href="#">View live Demo</a>
-
   </p>
 </p>
 
@@ -26,8 +25,14 @@ Laxis Coding Challenge
 
 - [React](https://reactjs.org/)
 - [Reactstrap](https://reactstrap.github.io/)
-- [Rabbit Lyrics](https://guoyunhe.github.io/rabbit-lyrics/)
+- [React Modular Audio Player](https://github.com/retrofuturejosh/react-modular-audio-player)
 - [MusixMatch](https://developer.musixmatch.com/)
+
+<!-- ROADMAP -->
+
+## Roadmap
+
+- See the [open issues]()
 
 <!-- CONTACT -->
 
