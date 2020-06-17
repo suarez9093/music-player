@@ -32,8 +32,19 @@ Laxis Coding Challenge
 
 ## Roadmap
 
-- See the [open issues]()
+- See the [open issues](https://github.com/suarez9093/music-player/issues)
 
+## Getting Started
+
+- Clone the repo
+- Run "npm install"
+- Run "npm run start"
+
+For this app to run properly, you will need to create a .env file at the root of the project containing these key/val pairs:
+
+REACT_APP_MM_KEY (MusixMatch API key)
+
+<!-- CONTACT -->
 <!-- CONTACT -->
 
 ## Contact
