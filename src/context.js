@@ -19,7 +19,7 @@ function AppContextProvider(props) {
     title: "",
     artist: "",
     src: "",
-    lyrics: "some text",
+    lyrics: "",
     isChecked: false
   });
 
