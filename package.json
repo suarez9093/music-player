@@ -13,9 +13,7 @@
     "react-dom": "^16.13.1",
     "react-modular-audio-player": "^1.2.0",
     "react-scripts": "3.4.1",
-    "reactstrap": "^8.4.1",
-    "unc-react-audio-captions": "^0.3.6",
-    "webvtt-player": "0.0.15"
+    "reactstrap": "^8.4.1"
   },
   "scripts": {
     "start": "react-scripts start",

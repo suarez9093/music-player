@@ -1,9 +1,10 @@
 import axios from 'axios';
 
-const endpoint = `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/matcher.lyrics.get?q_track=`
+const lyricEndpoint = `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/matcher.lyrics.get?q_track=`
+const albumEndpoint = `https://api.deezer.com/version/service/id/method/?`
 
 
-export async function musixMatch(artist, trackName) {
+export async function musixMatchLyrics(artist, trackName) {
     trackName = trackName.trim().split(" ")
     artist = artist.trim().split(" ")
     let track = []
@@ -22,8 +23,14 @@ export async function musixMatch(artist, trackName) {
     artistSearch = artistSearch.join("")
 
 
-    let response = await axios.get(`${endpoint}${track}&q_artist=${artistSearch}&f_has_lyrics&apikey=${process.env.REACT_APP_MM_KEY}`)
+    let response = await axios.get(`${lyricEndpoint}${track}&q_artist=${artistSearch}&f_has_lyrics&apikey=${process.env.REACT_APP_MM_KEY}`)
+    console.log('response', response.data)
     const { lyrics_body } = response.data.message.body.lyrics
     return lyrics_body;
+};
+
+
+export async function musixMatchAlbumArt(artist, trackName) {
+
 };
 

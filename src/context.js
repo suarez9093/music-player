@@ -1,5 +1,5 @@
 import React, { useState, createContext } from "react";
-import { musixMatch } from './utils/API';
+import { musixMatchLyrics } from './utils/API';
 const AppContext = createContext();
 
 function AppContextProvider(props) {
@@ -19,7 +19,7 @@ function AppContextProvider(props) {
     title: "",
     artist: "",
     src: "",
-    lyrics: "",
+    lyrics: "some text",
     isChecked: false
   });
 
@@ -40,7 +40,7 @@ function AppContextProvider(props) {
 
   async function searchLyrics() {
     if (songData.isChecked && songData.song !== "") {
-      const artistLyrics = await musixMatch(songData.artist, songData.title)
+      const artistLyrics = await musixMatchLyrics(songData.artist, songData.title)
       setDisplaySongLyrics(artistLyrics)
     } else setDisplaySongLyrics("No Results found")
   }

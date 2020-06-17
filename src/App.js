@@ -8,21 +8,21 @@ import { Container, Col, Row } from 'reactstrap';
 function App() {
   return (
 
+
     <Container>
       <br />
       <br />
-      <br />
-      <br />
-      <br />
 
       <Row>
-        <Col>
-          <LyricContainer />
-        </Col>
+        {/* <Col> */}
+        <LyricContainer />
+        {/* </Col> */}
       </Row>
 
+      <br />
+      <br />
       <Row>
-        <Col></Col>
+        {/* <Col></Col> */}
         <Col>
 
           <MusicPlayer />
@@ -32,8 +32,7 @@ function App() {
       </Row>
 
       <Row>
-        <Col></Col>
-        <Col></Col>
+
         <Col>
           <LoadMusicButton />
         </Col>
