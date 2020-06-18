@@ -1,8 +1,6 @@
 import axios from 'axios';
 
 const lyricEndpoint = `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/matcher.lyrics.get?q_track=`
-const albumEndpoint = `https://api.deezer.com/version/service/id/method/?`
-
 
 export async function musixMatchLyrics(artist, trackName) {
     trackName = trackName.trim().split(" ")
