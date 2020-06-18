@@ -5,7 +5,7 @@ import { AppContext } from '../../context';
 
 function MusicPlayer() {
     // ===================================================================================
-
+    let url = null;
     /* 1. Onsubmit of the load music button the following needs to happen
         1. Select the textarea 
         2. Load the track element into a variable
@@ -14,48 +14,30 @@ function MusicPlayer() {
         5. Sets the new blob to the src attribute of the track element
 
     */
-    var input = document.querySelector("textarea[ name = 'input' ]");
 
-    var download = document.getElementById("track");
 
-    var downloadUrl = null;
+    function handleInput(e) {
+        const { value } = e.target
+        console.log('textarea', value)
 
-    function handleChange() {
-        input.addEventListener("input", updateDownloadHref, false);
-
-        updateDownloadHref();
-
-    }
-
-    function updateDownloadHref() {
-        var blob = new Blob(
-            [input.value], // Blob parts.
-
+        let blob = new Blob(
+            [value],
             {
-                type: "text/vtt;charset=utf-8",
+                type: 'text/vtt;charset=utf-8'
             }
-        );
+        )
 
-        if (downloadUrl) {
-            URL.revokeObjectURL(downloadUrl);
+        if (url) {
+            URL.revokeObjectURL(url);
         }
+        url = URL.createObjectURL(blob)
 
-        downloadUrl = URL.createObjectURL(blob);
-
-        download.setAttribute("src", downloadUrl);
-
-        console.group("Object URL");
-
-        console.log("Text:", input.value);
-
-        console.log("URL:", downloadUrl);
-
-        console.groupEnd();
+        setCaptionSource(url)
     }
 
     // ===================================================================================
 
-    const { defaultPlaylist, songData } = useContext(AppContext)
+    const { defaultPlaylist, songData, captionSource, setCaptionSource } = useContext(AppContext)
     let rearrangedPlayer = [
         {
             className: "tier-top",
@@ -106,8 +88,9 @@ function MusicPlayer() {
             {/* =============================================================================================== */}
 
             {/*  */}
-            <textarea onChange={handleChange} name="input"></textarea>
+            <textarea onChange={handleInput} name="input"></textarea>
             <video
+                controls
                 poster="https://image.shutterstock.com/image-photo/black-background-texture-pattern-all-260nw-425112010.jpg"
             >
                 <source
@@ -115,7 +98,7 @@ function MusicPlayer() {
                     type="audio/mp3"
                 />
 
-                <track id="track" kind="captions" srclang="en" src="" />
+                <track id="track" kind="captions" srcLang="en" src={captionSource} />
             </video>
             {/* =============================================================================================== */}
             {/*  */}

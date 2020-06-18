@@ -6,6 +6,7 @@ function AppContextProvider(props) {
   const [lyricModal, setLyricModal] = useState(false);
   const [musicModal, setMusicModal] = useState(false);
   const [songLyrics, setSongLyrics] = useState();
+  const [captionSource, setCaptionSource] = useState();
   const [defaultPlaylist, setDefaultPlaylist] = useState([
     {
       src: "http://res.cloudinary.com/alick/video/upload/v1502689683/Luis_Fonsi_-_Despacito_ft._Daddy_Yankee_uyvqw9.mp3",
@@ -91,7 +92,7 @@ function AppContextProvider(props) {
           songData,
           handleChange,
           searchTrack,
-          displayLyrics, defaultPlaylist
+          displayLyrics, defaultPlaylist, captionSource, setCaptionSource
         }}
       >
         {props.children}
