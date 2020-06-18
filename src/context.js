@@ -47,19 +47,61 @@ function AppContextProvider(props) {
   }
 
 
+  // function handleChange(e) {
+  //   const { name, value, checked, type } = e.target;
+  //   type === "checkbox"
+  //     ? setSongData(prevState => ({
+  //       ...prevState,
+  //       [name]: checked
+  //     }))
+  //     : setSongData(prevState => ({
+  //       ...prevState,
+  //       [name]: value
+  //     }));
+  //   console.log(songData)
+  // }
   function handleChange(e) {
+    let url;
     const { name, value, checked, type } = e.target;
-    type === "checkbox"
-      ? setSongData(prevState => ({
+    if (type === "checkbox") {
+      setSongData(prevState => ({
         ...prevState,
         [name]: checked
       }))
-      : setSongData(prevState => ({
+    }
+    else if (type === "textarea") {
+      let blob = new Blob(
+        [value],
+        {
+          type: 'text/vtt;charset=utf-8'
+        }
+      )
+
+      if (url) {
+        URL.revokeObjectURL(url);
+      }
+      url = URL.createObjectURL(blob)
+
+      setCaptionSource(url)
+      setSongData(prevState => ({
         ...prevState,
         [name]: value
       }));
-    console.log(songData)
+    }
+
+    else {
+      setSongData(prevState => ({
+        ...prevState,
+        [name]: value
+      }));
+
+    }
+
+
+
+
   }
+  console.log(songData)
 
   function handleLyricChange(e) {
     const { value } = e.target;

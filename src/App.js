@@ -12,12 +12,12 @@ function App() {
     <Container>
       <br />
       <br />
-
+      {/* 
       <Row>
-        {/* <Col> */}
+        <Col>
         <LyricContainer />
-        {/* </Col> */}
-      </Row>
+        </Col>
+      </Row> */}
 
       <br />
       <br />
@@ -27,8 +27,7 @@ function App() {
 
           <MusicPlayer />
         </Col>
-        <Col>
-        </Col>
+
       </Row>
 
       <Row>
