@@ -24,7 +24,7 @@ function NavbarComponent() {
     return (
         <div>
             <Navbar color="light" light expand="md">
-                <NavbarBrand href="https://suarez9093.github.io/music-player/">Musix</NavbarBrand>
+                <NavbarBrand href="https://suarez9093.github.io/music-player/">Ill-Lyrical</NavbarBrand>
                 <NavbarToggler onClick={toggleNavbar} />
                 <Collapse isOpen={navisOpen} navbar>
                     <Nav className="mr-auto" navbar>
