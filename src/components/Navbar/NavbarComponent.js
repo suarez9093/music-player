@@ -23,7 +23,7 @@ function NavbarComponent() {
 
     return (
         <div>
-            <Navbar color="light" light expand="md">
+            <Navbar color="faded" expand="md">
                 <NavbarBrand href="https://suarez9093.github.io/music-player/">Ill-Lyrical</NavbarBrand>
                 <NavbarToggler onClick={toggleNavbar} />
                 <Collapse isOpen={navisOpen} navbar>

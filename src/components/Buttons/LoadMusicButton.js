@@ -10,6 +10,7 @@ import {
   FormGroup,
   Label,
   Input,
+  FormText,
 } from "reactstrap";
 
 function LoadMusicButton(props) {
@@ -23,7 +24,7 @@ function LoadMusicButton(props) {
 
   return (
     <div>
-      <Button outline color="secondary" onClick={toggleMusicModal}>
+      <Button outline color="warning" onClick={toggleMusicModal}>
         Load Music
       </Button>
       <Modal isOpen={musicModal}>
@@ -71,9 +72,27 @@ function LoadMusicButton(props) {
                 value={songData.lyrics}
                 onChange={handleChange}
               />
+              <FormText color="muted">
+
+                <h6>
+                  Enter in Lyrics in this format to have lyrics and music sync:{" "}
+                  <br></br>
+                  <br></br>
+                  <p>WEBVTT</p>
+                </h6>
+                <p>00:11.000 &#45;&#45;&#62; 00:13.000 vertical:rl
+                </p>
+                <p>Baby come back, any type of fool could see</p>
+                <p>00:14.000 &#45;&#45;&#62; 00:16.503 vertical:rl
+                </p>
+                <p>There was something in everything about you</p>
+
+              </FormText>
+
             </FormGroup>
 
-            <FormGroup check>
+
+            {/* <FormGroup check>
               <Label check>
                 <Input
                   type="checkbox"
@@ -83,19 +102,19 @@ function LoadMusicButton(props) {
                 />
                 Auto Load partial lyrics
               </Label>
-            </FormGroup>
+            </FormGroup> */}
           </Form>
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={searchTrack}>
+          <Button color="warning" onClick={searchTrack}>
             Submit
           </Button>{" "}
-          <Button color="secondary" onClick={toggleMusicModal}>
+          <Button color="danger" onClick={toggleMusicModal}>
             Cancel
           </Button>
         </ModalFooter>
       </Modal>
-    </div>
+    </div >
   );
 }
 

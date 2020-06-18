@@ -1,6 +1,6 @@
  <h3 align="center">Laxis Coding Challenge</h3>
  
-![Musix](gif/demo.gif)
+![Illlyrical](gif/demo.gif)
 
 <!-- PROJECT LOGO -->
 <br />
@@ -8,7 +8,7 @@
   
   
   <p align="center">
-    An app that lets you set an appointment to view a home that is listed on the market without the need of a real estate agent.
+    Laxis Coding Challenge
     <br />
     <br />
     <a href="https://suarez9093.github.io/music-player/">View live Demo</a>
