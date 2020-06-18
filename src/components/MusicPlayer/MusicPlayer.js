@@ -1,73 +1,40 @@
 import React, { useContext } from 'react';
-import AudioPlayer from 'react-modular-audio-player';
+import { Player, ControlBar, ReplayControl, ForwardControl, ClosedCaptionButton, BigPlayButton } from 'video-react';
+import caption from './captions.vtt';
+import './style.css';
 
 import { AppContext } from '../../context';
 
+
 function MusicPlayer() {
-    const { defaultPlaylist, songData } = useContext(AppContext)
-    let rearrangedPlayer = [
-        {
-            className: "tier-top",
-            style: { margin: "0.3rem" },
-            innerComponents: [
 
-                {
-                    type: "play",
-                    style: { width: "fit-content" }
-                },
-                {
-                    type: "rewind",
-                    style: { width: "fit-content" }
-                },
-                {
-                    type: "forward",
-                    style: { width: "fit-content" }
-                },
-                {
-                    type: "time",
-                    style: { width: "fit-content" }
-                },
-                {
-                    type: "seek"
-                }
-            ]
-        },
-
-        {
-            className: "tier-bottom",
-            style: { margin: "0rem 0.3rem 0.3rem 0.3rem" },
-            innerComponents: [
-                {
-                    type: "name",
-
-
-                },
-                {
-                    type: "volume"
-                }
-            ]
-        }
-    ]
-
+    const { songData, captionSource } = useContext(AppContext)
 
     return (
-        <div>
+        <div >
+            <Player
+                // fluid={false} width={700}
+                src={!songData.src ? "http://res.cloudinary.com/alick/video/upload/v1502689683/Luis_Fonsi_-_Despacito_ft._Daddy_Yankee_uyvqw9.mp3" : songData.src}>
+                <track
+                    kind="captions"
+                    src={!captionSource ? caption : captionSource}
+                    srcLang="en"
+                    label="English"
+                    default />
+                <BigPlayButton position="center" />
+                <ControlBar autoHide={true}>
+                    <ReplayControl seconds={5} order={2.1} />
+                    <ForwardControl seconds={5} order={3.1} />
+                    <ClosedCaptionButton order={7} />
+                </ControlBar>
+            </Player>
 
-            <AudioPlayer
-                rearrange={rearrangedPlayer}
-                hideLoop={true}
-                iconSize="2em"
-                fontSize="large"
-                audioFiles={[
-                    {
-                        src: songData.src,
-                        title: songData.title,
-                        artist: songData.artist
-                    }]}
 
-            />
-        </div>
+        </div >
     )
 };
 
+
+
 export default MusicPlayer
+

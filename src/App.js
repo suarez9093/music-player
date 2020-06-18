@@ -1,52 +1,21 @@
 import React from "react";
 import MusicPlayer from './components/MusicPlayer/MusicPlayer';
-import LoadLyricsButton from "./components/Buttons/LoadLyricsButton";
-import LoadMusicButton from "./components/Buttons/LoadMusicButton";
-import LyricContainer from "./components/LyricContainer/LyricContainer";
+import NavbarComponent from './components/Navbar/NavbarComponent'
 import { Container, Col, Row } from 'reactstrap';
 
 function App() {
   return (
+    <>
+      <NavbarComponent />
+      <div className="app-grid-container">
 
-
-    <Container>
-      <br />
-      <br />
-
-      <Row>
-        {/* <Col> */}
-        <LyricContainer />
-        {/* </Col> */}
-      </Row>
-
-      <br />
-      <br />
-      <Row>
-        {/* <Col></Col> */}
-        <Col>
+        <div className="music-player">
 
           <MusicPlayer />
-        </Col>
-        <Col>
-        </Col>
-      </Row>
+        </div>
 
-      <Row>
-
-        <Col>
-          <LoadMusicButton />
-        </Col>
-        <Col>
-          {/* <LoadLyricsButton /> */}
-        </Col>
-        <Col></Col>
-        <Col></Col>
-
-      </Row>
-
-    </Container>
-
-
+      </div>
+    </>
   )
 }
 

@@ -63,7 +63,7 @@ function LoadMusicButton(props) {
               />
             </FormGroup>
             <FormGroup>
-              <Label for="lyrics">Link to Song</Label>
+              <Label for="lyrics">WebVtt format lyrics</Label>
               <Input
                 type="textarea"
                 name="lyrics"

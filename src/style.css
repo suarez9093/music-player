@@ -1,0 +1,27 @@
+body,
+html {
+  font-family: "Boogaloo", cursive;
+  background-image: url("https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  /* background-image: url("./images/bg.jpg"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+::cue {
+  line-height: 2.5;
+}
+
+.app-grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-template-rows: 25% 25% 25% 25%;
+}
+
+.music-player {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
