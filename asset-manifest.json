@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/music-player/static/css/main.d28129a8.chunk.css",
-    "main.js": "/music-player/static/js/main.783a1ac0.chunk.js",
-    "main.js.map": "/music-player/static/js/main.783a1ac0.chunk.js.map",
+    "main.js": "/music-player/static/js/main.de84fcac.chunk.js",
+    "main.js.map": "/music-player/static/js/main.de84fcac.chunk.js.map",
     "runtime-main.js": "/music-player/static/js/runtime-main.c923f3ec.js",
     "runtime-main.js.map": "/music-player/static/js/runtime-main.c923f3ec.js.map",
-    "static/css/2.af3c1da9.chunk.css": "/music-player/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.df2fb272.chunk.js": "/music-player/static/js/2.df2fb272.chunk.js",
-    "static/js/2.df2fb272.chunk.js.map": "/music-player/static/js/2.df2fb272.chunk.js.map",
+    "static/css/2.833fd5e5.chunk.css": "/music-player/static/css/2.833fd5e5.chunk.css",
+    "static/js/2.17b2d686.chunk.js": "/music-player/static/js/2.17b2d686.chunk.js",
+    "static/js/2.17b2d686.chunk.js.map": "/music-player/static/js/2.17b2d686.chunk.js.map",
     "index.html": "/music-player/index.html",
-    "precache-manifest.901262b45ad8bace7eaa6cd289557801.js": "/music-player/precache-manifest.901262b45ad8bace7eaa6cd289557801.js",
+    "precache-manifest.d2cab878f1a9aa7fc7d7655bfe061714.js": "/music-player/precache-manifest.d2cab878f1a9aa7fc7d7655bfe061714.js",
     "service-worker.js": "/music-player/service-worker.js",
-    "static/css/2.af3c1da9.chunk.css.map": "/music-player/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/2.833fd5e5.chunk.css.map": "/music-player/static/css/2.833fd5e5.chunk.css.map",
     "static/css/main.d28129a8.chunk.css.map": "/music-player/static/css/main.d28129a8.chunk.css.map",
-    "static/js/2.df2fb272.chunk.js.LICENSE.txt": "/music-player/static/js/2.df2fb272.chunk.js.LICENSE.txt",
+    "static/js/2.17b2d686.chunk.js.LICENSE.txt": "/music-player/static/js/2.17b2d686.chunk.js.LICENSE.txt",
     "static/media/style.css": "/music-player/static/media/bg.3ef2c7ba.jpeg",
     "static/media/captions.vtt": "/music-player/static/media/captions.343ae23a.vtt"
   },
   "entrypoints": [
     "static/js/runtime-main.c923f3ec.js",
-    "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.df2fb272.chunk.js",
+    "static/css/2.833fd5e5.chunk.css",
+    "static/js/2.17b2d686.chunk.js",
     "static/css/main.d28129a8.chunk.css",
-    "static/js/main.783a1ac0.chunk.js"
+    "static/js/main.de84fcac.chunk.js"
   ]
 }
