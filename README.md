@@ -25,7 +25,7 @@ Laxis Coding Challenge
 
 - [React](https://reactjs.org/)
 - [Reactstrap](https://reactstrap.github.io/)
-- [React Modular Audio Player](https://github.com/retrofuturejosh/react-modular-audio-player)
+- [Video React](https://github.com/video-react/video-react)
 - [MusixMatch](https://developer.musixmatch.com/)
 
 <!-- ROADMAP -->

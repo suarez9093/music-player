@@ -24,31 +24,15 @@ function NavbarComponent() {
     return (
         <div>
             <Navbar color="light" light expand="md">
-                <NavbarBrand href="/">Musix</NavbarBrand>
+                <NavbarBrand href="https://suarez9093.github.io/music-player/">Musix</NavbarBrand>
                 <NavbarToggler onClick={toggleNavbar} />
                 <Collapse isOpen={navisOpen} navbar>
                     <Nav className="mr-auto" navbar>
 
                         <NavItem>
-                            <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                            <NavLink href="https://github.com/suarez9093/music-player">GitHub</NavLink>
                         </NavItem>
-                        <UncontrolledDropdown nav inNavbar>
-                            <DropdownToggle nav caret>
-                                Options
-              </DropdownToggle>
-                            <DropdownMenu right>
-                                <DropdownItem>
-                                    Option 1
-                </DropdownItem>
-                                <DropdownItem>
-                                    Option 2
-                </DropdownItem>
-                                <DropdownItem divider />
-                                <DropdownItem>
-                                    Reset
-                </DropdownItem>
-                            </DropdownMenu>
-                        </UncontrolledDropdown>
+
                     </Nav>
                     <LoadMusicButton />
                 </Collapse>
