@@ -8,7 +8,7 @@
   
   
   <p align="center">
-    Laxis Coding Challenge
+    Illlyrical
     <br />
     <br />
     <a href="https://suarez9093.github.io/music-player/">View live Demo</a>
@@ -19,7 +19,7 @@
 
 ## About The Project
 
-Laxis Coding Challenge
+An app that allows you to load in your own music and lyrics to display karaoke style
 
 ### Built With
 
