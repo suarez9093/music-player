@@ -90,14 +90,17 @@ function AppContextProvider(props) {
       <AppContext.Provider
         value={{
           musicModal,
+          displaySongLyrics,
+          songData,
+          captionSource,
+          navisOpen,
+          setCaptionSource,
+          toggleNavbar,
           toggleMusicModal,
           setSongLyrics,
-          displaySongLyrics,
           handleLyricChange,
-          songData,
           handleChange,
           searchTrack,
-          captionSource, setCaptionSource, navisOpen, toggleNavbar
         }}
       >
         {props.children}

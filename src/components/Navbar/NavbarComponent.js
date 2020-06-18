@@ -8,18 +8,12 @@ import {
     Nav,
     NavItem,
     NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    NavbarText
+
 } from 'reactstrap';
 import { AppContext } from '../../context';
 
 function NavbarComponent() {
     const { navisOpen, toggleNavbar } = useContext(AppContext);
-
-
 
     return (
         <div>
@@ -28,11 +22,9 @@ function NavbarComponent() {
                 <NavbarToggler onClick={toggleNavbar} />
                 <Collapse isOpen={navisOpen} navbar>
                     <Nav className="mr-auto" navbar>
-
                         <NavItem>
                             <NavLink href="https://github.com/suarez9093/music-player">GitHub</NavLink>
                         </NavItem>
-
                     </Nav>
                     <LoadMusicButton />
                 </Collapse>

@@ -8,7 +8,7 @@
   
   
   <p align="center">
-    Illlyrical
+    Ill-lyrical
     <br />
     <br />
     <a href="https://suarez9093.github.io/music-player/">View live Demo</a>

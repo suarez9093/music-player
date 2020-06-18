@@ -13,7 +13,7 @@ import {
   FormText,
 } from "reactstrap";
 
-function LoadMusicButton(props) {
+function LoadMusicButton() {
   const {
     musicModal,
     toggleMusicModal,
@@ -80,12 +80,12 @@ function LoadMusicButton(props) {
                   <br></br>
                   <p>WEBVTT</p>
                 </h6>
-                <p>00:11.000 &#45;&#45;&#62; 00:13.000 vertical:rl
+                <p>00:01.000 &#45;&#45;&#62; 00:05.000 line:50%<br />Baby come back, any type of fool could see
                 </p>
-                <p>Baby come back, any type of fool could see</p>
-                <p>00:14.000 &#45;&#45;&#62; 00:16.503 vertical:rl
+
+                <p>00:07.000 &#45;&#45;&#62; 00:16.000 line:50% <br />There was something in everything about you
                 </p>
-                <p>There was something in everything about you</p>
+
 
               </FormText>
 
