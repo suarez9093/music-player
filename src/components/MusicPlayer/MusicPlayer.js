@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { Player, ControlBar, ReplayControl, ForwardControl, ClosedCaptionButton, BigPlayButton } from 'video-react';
 import caption from './captions.vtt'
-import DownloadButton from './CustomButton/loadButton';
 
 
 import { AppContext } from '../../context';
@@ -26,7 +25,6 @@ function MusicPlayer() {
                     <ReplayControl seconds={5} order={2.1} />
                     <ForwardControl seconds={5} order={3.1} />
                     <ClosedCaptionButton order={7} />
-                    <DownloadButton order={7} />
                 </ControlBar>
             </Player>
         </div >
